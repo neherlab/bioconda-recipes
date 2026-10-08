@@ -21,11 +21,6 @@ build:
   run_exports:
     - {{ pin_subpackage(name, max_pin="x") }}
 
-requirements:
-  run:
-    # unwinding library of the glibc builds
-    - libgcc  # [linux]
-
 test:
   commands:
     - treeknit --version
